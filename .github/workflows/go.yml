@@ -29,7 +29,11 @@ jobs:
       run: docker-compose up -d
 
     - name: Test
-      run: go test main_test.go
+      run: |
+        while ! docker exec projeto-go-testes_postgres_1 pg_isready -U postgres -h localhost -p 5432; do
+        sleep 1
+          done
+        go test main_test.go
 
   build:
     needs: test
