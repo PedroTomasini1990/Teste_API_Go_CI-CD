@@ -1,7 +1,7 @@
 version: '3'
 services:
   postgres:
-    image: "postgres"
+    image: "postgres:latest"
     environment:
       - POSTGRES_USER=root
       - POSTGRES_PASSWORD=root
@@ -12,7 +12,7 @@ services:
       - ./postgres-data:/var/lib/postgresql/data  
 
   pgadmin-compose:
-    image: dpage/pgadmin4
+    image: dpage/pgadmin4;latest
     environment:
       PGADMIN_DEFAULT_EMAIL: "gui@alura.com"
       PGADMIN_DEFAULT_PASSWORD: "123456"
