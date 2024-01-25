@@ -12,7 +12,7 @@ services:
       - ./postgres-data:/var/lib/postgresql/data  
 
   pgadmin-compose:
-    image: dpage/pgadmin4;latest
+    image: dpage/pgadmin4:latest
     environment:
       PGADMIN_DEFAULT_EMAIL: "gui@alura.com"
       PGADMIN_DEFAULT_PASSWORD: "123456"
