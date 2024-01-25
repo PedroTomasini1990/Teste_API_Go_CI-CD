@@ -28,9 +28,22 @@ jobs:
     - name: Create-DB
       run: docker-compose up -d
 
+    - name: Wait for PostgreSQL
+      run: |
+        while ! docker exec projeto-go-testes-postgres-1 pg_isready -U postgres -h localhost -p 5432; do
+          sleep 1
+        done
+
 
     - name: Test
-      run: go test main_test.go
+      run: |
+        echo "Waiting for PostgreSQL to start..."
+        docker-compose up -d postgres
+        while ! docker exec projeto-go-testes-postgres-1 pg_isready -U postgres -h localhost -p 5432; do
+          sleep 1
+        done
+        echo "PostgreSQL started successfully."
+        go test main_test.go
 
   build:
     needs: test
