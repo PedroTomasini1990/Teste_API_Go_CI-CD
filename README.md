@@ -1,114 +1,35 @@
-<p align="center">
-  <a href="" rel="noopener">
- <img width=200px height=200px src="https://i.imgur.com/6wj0hh6.jpg" alt="Project logo"></a>
-</p>
+# API Go Gin - Estrutura e Automação
 
-<h3 align="center">Project Title</h3>
+Este repositório contém uma API em Go, desenvolvida com o framework Gin, para gerenciar informações de alunos. O projeto abrange operações básicas como criação, leitura, atualização e exclusão de registros.
 
-<div align="center">
+## Estrutura do Código
 
-[![Status](https://img.shields.io/badge/status-active-success.svg)]()
-[![GitHub Issues](https://img.shields.io/github/issues/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/issues)
-[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/pulls)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
+- **`main.go`**: Arquivo principal que inicia o servidor Gin e define as rotas da API.
+- **`controllers/`**: Diretório contendo controladores para cada rota da API.
+- **`models/`**: Contém os modelos de dados, como o modelo de aluno.
+- **`database/`**: Configuração e conexão com o banco de dados.
 
-</div>
+## Testes Unitários
 
----
+Os testes unitários são fundamentais para garantir a integridade e o desempenho da aplicação. Eles estão localizados no arquivo `main_test.go` e são executados automaticamente usando GitHub Actions em cada push para a branch 'main' e em cada pull request para a 'main'.
 
-<p align="center"> Few lines describing your project.
-    <br> 
-</p>
+## Automação com GitHub Actions
 
-## 📝 Table of Contents
+O GitHub Actions é utilizado para automatizar o processo de teste e construção da aplicação. Duas jobs foram configuradas:
 
-- [About](#about)
-- [Getting Started](#getting_started)
-- [Deployment](#deployment)
-- [Usage](#usage)
-- [Built Using](#built_using)
-- [TODO](../TODO.md)
-- [Contributing](../CONTRIBUTING.md)
-- [Authors](#authors)
-- [Acknowledgments](#acknowledgement)
+1. **Teste:**
+   - Executa os testes unitários em diversas versões do Go e ambientes.
+   - Configura um banco de dados local usando Docker Compose para os testes.
 
-## 🧐 About <a name = "about"></a>
+2. **Construção:**
+   - Realiza a construção da aplicação.
 
-Write about 1-2 paragraphs describing the purpose of your project.
+Essas ações garantem que a aplicação seja testada automaticamente em diferentes ambientes e versões do Go, proporcionando confiabilidade ao código.
 
-## 🏁 Getting Started <a name = "getting_started"></a>
+## Como Contribuir
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
+Sinta-se à vontade para contribuir, relatar problemas ou sugerir melhorias. Seu feedback é essencial para o aprimoramento contínuo do projeto.
 
-### Prerequisites
+## Licença
 
-What things you need to install the software and how to install them.
-
-```
-Give examples
-```
-
-### Installing
-
-A step by step series of examples that tell you how to get a development env running.
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo.
-
-## 🔧 Running the tests <a name = "tests"></a>
-
-Explain how to run the automated tests for this system.
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## 🎈 Usage <a name="usage"></a>
-
-Add notes about how to use the system.
-
-## 🚀 Deployment <a name = "deployment"></a>
-
-Add additional notes about how to deploy this on a live system.
-
-## ⛏️ Built Using <a name = "built_using"></a>
-
-- [MongoDB](https://www.mongodb.com/) - Database
-- [Express](https://expressjs.com/) - Server Framework
-- [VueJs](https://vuejs.org/) - Web Framework
-- [NodeJs](https://nodejs.org/en/) - Server Environment
-
-## ✍️ Authors <a name = "authors"></a>
-
-- [@kylelobo](https://github.com/kylelobo) - Idea & Initial work
-
-See also the list of [contributors](https://github.com/kylelobo/The-Documentation-Compendium/contributors) who participated in this project.
-
-## 🎉 Acknowledgements <a name = "acknowledgement"></a>
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- References
+Este projeto é distribuído sob a [Licença MIT](LICENSE), conferindo a liberdade para compartilhar e modificar o código conforme necessário.
